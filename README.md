@@ -26,5 +26,4 @@ python eot.py --task datast --threshold 0.3 --num_few_shot 5 --prompt_type [stan
 
 
 
-### We’re cleaning up the code now and will push an update shortly.
 
