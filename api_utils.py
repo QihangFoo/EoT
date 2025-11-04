@@ -93,9 +93,9 @@ class IChatAPI:
 
     def grain_probs(self, messages, candidate):
 
-        messages_text = self.convert_chat_to_text(messages)
+        # messages_text = self.convert_chat_to_text(messages)
         input_ids = self.tokenizer.apply_chat_template(
-            messages_text,
+            messages,
             add_generation_prompt=True,
             # add_special_tokens=False,
             return_tensors="pt"
@@ -139,4 +139,5 @@ class IChatAPI:
             # top_p=top_p
         )
         response = outputs[0][input_ids.shape[-1]:]
+
         return self.tokenizer.decode(response, skip_special_token=True)
