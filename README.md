@@ -21,7 +21,7 @@ Multiple-choice questions (MCQs) are a widely used and vital assessment format f
 
 
 ```bash
-python eot.py --task datast --threshold 0.3 --num_few_shot 5 --prompt_type [standard/cot/zero_shot_cot/complex_cot] --setting [eot/bbase] --p 2
+python eot_eval.py --task datast --threshold 0.3 --num_few_shot 5 --prompt_type [standard/cot/zero_shot_cot/complex_cot] --setting [eot/bbase] --p 2
 ```
 
 
