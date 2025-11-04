@@ -30,6 +30,15 @@ def main():
 
     parser = argparse.ArgumentParser()
 
+    parser.add_argument('--task', type=str, required=True, help='Task name, e.g. "arc"')
+    parser.add_argument('--threshold', type=float, required=True, help='Threshold for evaluation')
+    parser.add_argument('--num_few_shot', type=int, required=True, help='Number of few-shot samples')
+    parser.add_argument('--prompt_type', type=str, required=True, help='Type of prompt, e.g. "standard"')
+    parser.add_argument('--setting', type=str, required=True, help='Setting for the evaluation, e.g. "eot"')
+    parser.add_argument('--p', type=int, required=True, help='Parameter p')
+    parser.add_argument('--model_name', type=str, required=True, help='Model name, e.g. "Llama-3-8B-Instruct"')
+    parser.add_argument('--save_path', type=str, required=True, help='Path to save results')
+
     args = parser.parse_args()
     threshold = args.threshold
     model_name = args.model_name
