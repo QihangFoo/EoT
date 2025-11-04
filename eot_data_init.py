@@ -23,7 +23,7 @@ def prepare_eval(args):
     # save_path
     save_path = f'results_{task}/{setting}/{task}'
     if setting is not None:
-        save_path += f'_{setting}_{args.model}_{args.threshold}'
+        save_path += f'_{setting}_{args.model_name}_{args.threshold}'
     args.save_path = save_path
     os.makedirs(args.save_path, exist_ok=True)
 
