@@ -23,7 +23,7 @@ def prepare_eval(args):
     # save_path
     save_path = f'results_{task}/{setting}/{task}'
     if setting is not None:
-        save_path += f'_{setting}_{args.model_name}_{args.threshold}'
+        save_path += f'_{args.prompt_type}_{setting}_{args.model_name}_{args.threshold}'
     args.save_path = save_path
     os.makedirs(args.save_path, exist_ok=True)
 
@@ -99,3 +99,4 @@ def prepare_eval(args):
         raise NotImplementedError
 
     return subjects, prepare_few_shot_samples_exclude, prepare_eval_samples, prepare_eval_fn
+
