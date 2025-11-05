@@ -150,7 +150,7 @@ def prepare_eval_fn_eot_base(args, api, few_shot_samples, num_few_shot, threshol
 
             candidate_opt.pop(res_probs_sort[-1][0])
             # speed up the elimination process
-            if args.dataset in ['MMLU-PRO']:
+            if args.task in ['MMLU-PRO']:
                 candidate_opt.pop(res_probs_sort[-2][0])
 
             if len(candidate_opt) == 1 or temp_ideal[0] not in candidate_opt.keys() or count <= 0:
@@ -225,7 +225,7 @@ def prepare_eval_fn_eot_cot(args, api, few_shot_samples, num_few_shot, threshold
 
             candidate_opt.pop(res_probs_sort[-1][0])
             # speed up the elimination process
-            if args.dataset in ['MMLU-PRO']:
+            if args.task in ['MMLU-PRO']:
                 candidate_opt.pop(res_probs_sort[-2][0])
 
             if len(candidate_opt) == 1 or temp_ideal[0] not in candidate_opt.keys() or count <= 0:
