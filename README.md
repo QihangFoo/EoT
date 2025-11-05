@@ -25,5 +25,16 @@ python eot_eval.py --task arc --model_name  Llama-3.1-8B-Instruct -- save_path /
 ```
 
 
+## Dataset Description
+
+The dataset organization in this project follows a unified structure under the data/ directory.
+Each dataset should include the following subdirectories:
+
+- dev/: Contains a small portion of samples extracted from the full dataset, used as few-shot examples during experiments. These samples serve as prompts or reference inputs for few-shot learning scenarios.
+
+- test/: The test set directory, which contains the data actually used for model evaluation in experiments. The test data must not overlap with samples in the dev/ set.
+
+All datasets should follow consistent naming conventions and file formats to ensure reproducibility and compatibility across different data sources.
+
 
 
