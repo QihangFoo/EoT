@@ -18,7 +18,7 @@ from api_utils import IChatAPI
 
 logger = logging.getLogger(__name__)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 
 
@@ -61,7 +61,7 @@ def main():
         results = eval_all_samples(
             eval_fn, eval_samples,
             name=f'{args.task},{args.num_few_shot},{args.setting},{subject}, {threshold}',
-            threads=10
+            threads=1
         )
 
         if len(results) > 0:
