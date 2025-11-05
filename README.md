@@ -22,6 +22,9 @@ Multiple-choice questions (MCQs) are a widely used and vital assessment format f
 
 ```bash
 python eot_eval.py --task arc --model_name  Llama-3.1-8B-Instruct -- save_path /result/arc --threshold 0.3 --num_few_shot 5 --prompt_type [standard/cot/zero_shot_cot/complex_cot] --setting [eot/base] --p 2
+
+# example
+python eot_eval.py --task arc --model_name Llama-3.1-8B-Instruct --save_path /result/arc --threshold 0.3 --num_few_shot 5 --prompt_type standard --setting eot --p 2
 ```
 
 
